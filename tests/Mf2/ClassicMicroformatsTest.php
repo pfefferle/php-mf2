@@ -901,7 +901,7 @@ END;
     $output = $parser->parse();
     $item = $output['items'][0];
 
-    $this->assertEquals(['test'], $item['properties']['category']);
+    $this->assertEquals(array('test'), $item['properties']['category']);
     $this->assertEquals('Entry content should not include the generated data element for rel tag backcompat test', $item['properties']['content'][0]['value']);
     $this->assertEquals('Entry content should not include the generated <code>data</code> element for rel tag backcompat <a href="/tag/test" rel="tag">test</a>', $item['properties']['content'][0]['html']);
   }
